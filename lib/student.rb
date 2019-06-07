@@ -5,7 +5,7 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    student_hash.each {|key, value| 
+    student_hash.each {|key, value| self.send ""
     @name = student_hash[:name]
     @location = student_hash[:location]
     @twitter = student_hash[:twitter]
