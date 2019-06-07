@@ -12,10 +12,11 @@ class Scraper
       student_hash = {}
       student_hash[:name] = student.css("h4").text
       student_hash[:location] = student.css("p").text 
-      student_hash[:profile_url] = student.css("a").text
+      student_hash[:profile_url] = student.css("a").first["href"]
       #binding.pry
-      student_list << student 
+      student_list << student_hash 
     end 
+    student_list
   end
 
   def self.scrape_profile_page(profile_url)
