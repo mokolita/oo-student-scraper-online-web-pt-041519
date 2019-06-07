@@ -16,11 +16,12 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-    
+    attribute_hash.each do |student_hash|
+      
   end
 
   def self.all
-    
+    @@all 
   end
 end
 
